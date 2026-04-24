@@ -17,7 +17,7 @@ import { inject, observer } from 'mobx-react';
 import renderRoutes from 'utils/RouterConfig';
 import { DashboardOutlined, CodeOutlined, BookOutlined } from '@ant-design/icons';
 import * as THREE from 'three';
-import CLOUDS from 'vanta/dist/vanta.clouds.min';
+import NET from 'vanta/dist/vanta.net.min';
 
 import logo from 'asset/image/logo.png';
 import styles from './index.less';
@@ -30,22 +30,19 @@ class VantaCloudsBackground extends Component {
   }
 
   componentDidMount() {
-    this.vantaEffect = CLOUDS({
+    this.vantaEffect = NET({
       el: this.vantaRef.current,
       THREE,
-      mouseControls: false,
-      touchControls: false,
+      mouseControls: true,
+      touchControls: true,
       gyroControls: false,
       minHeight: 200,
       minWidth: 200,
-      backgroundColor: 0x21242a,
-      skyColor: 0xe5007d,
-      cloudColor: 0xffffff,
-      cloudShadowColor: 0xa00055,
-      sunColor: 0xe5007d,
-      sunGlareColor: 0xff80c0,
-      sunlightColor: 0xff80c0,
-      speed: 1.2,
+      backgroundColor: 0x7ac3ed,
+      color: 0xffffff,
+      points: 12,
+      maxDistance: 20,
+      spacing: 18,
     });
   }
 
@@ -71,6 +68,8 @@ export class AuthLayout extends Component {
     return (
       <div className={styles.right}>
         <VantaCloudsBackground />
+        <div className={styles['hero']}>
+        </div>
         <div className={styles['quick-access']}>
           <p className={styles['quick-access-title']}>Accès rapide</p>
           <a
