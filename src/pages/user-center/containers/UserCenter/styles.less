@@ -1,0 +1,41 @@
+@import '~styles/variables';
+
+.content {
+  height: 100%;
+  padding: 24px;
+  overflow: auto;
+
+  .user-info-card {
+    height: 255px;
+
+    .user-info-detail {
+      height: 100%;
+      padding: 24px;
+      text-align: left;
+
+      .user-info-detail-item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-left: 3rem;
+        color: @color-text-body;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.hvc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgc {
+  margin-bottom: 16px;
+  padding: 24px;
+  background-color: white;
+  border-radius: @border-radius;
+  box-shadow: @base-shadow;
+}

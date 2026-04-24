@@ -1,0 +1,29 @@
+{
+  "baseUrl": "http://localhost:8081",
+  "viewportWidth": 1600,
+  "viewportHeight": 900,
+  "video": true,
+  "retries": 5,
+  "env": {
+    "username": "administrator",
+    "password": "passW0rd",
+    "region": "RegionOne",
+    "domain": "Default",
+    "sessionKey": "X-Auth-Token",
+    "language": "fr"
+  },
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "test/e2e/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "fixturesFolder": "test/e2e/fixtures",
+  "integrationFolder": "test/e2e/integration",
+  "pluginsFile": "test/e2e/plugins/index.js",
+  "screenshotsFolder": "test/e2e/screenshots",
+  "videosFolder": "test/e2e/videos",
+  "supportFile": "test/e2e/support/index.js",
+  "downloadsFolder": "test/e2e/downloads"
+}

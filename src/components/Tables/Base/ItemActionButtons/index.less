@@ -1,0 +1,50 @@
+.first-action {
+  padding: 0;
+  text-align: left;
+
+  span {
+    display: block;
+    max-width: 48px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.more-action {
+  padding: 0;
+}
+
+.action-sub-menu {
+  padding: 0;
+
+  :global {
+    .ant-dropdown-menu-submenu-popup ul {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      padding: 0 12px;
+    }
+  }
+}
+
+.more-action-btn {
+  width: 100%;
+  text-align: left;
+}
+
+.single-more-action {
+  :global {
+    .ant-btn-link {
+      width: auto;
+    }
+  }
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+}

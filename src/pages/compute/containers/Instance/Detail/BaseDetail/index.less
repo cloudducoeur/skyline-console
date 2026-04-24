@@ -1,0 +1,160 @@
+@import '~styles/variables';
+
+@min-space: 8px;
+@mid-space: 16px;
+@lg-space: 24px;
+@topo-line: 1px solid #d2d2d2;
+@resource-box-bg: #fbfdff;
+@resource-box-border: 1px solid #cfe1ff;
+
+.topology-content {
+  overflow: auto;
+
+  .vm-interface:first-child {
+    border-left: @topo-line;
+
+    .interface-line {
+      border-left: none;
+    }
+  }
+
+  .vm-interface {
+    display: inline-block;
+    margin-left: 35px;
+    padding-bottom: 20px;
+
+    .interface-line {
+      display: inline-block;
+      width: 8px;
+      height: 60px;
+      border-bottom: @topo-line;
+      border-left: @topo-line;
+    }
+
+    .interface-item {
+      display: inline-block;
+    }
+  }
+
+  .vm {
+    padding: @mid-space;
+    background-color: @resource-box-bg;
+    border: @resource-box-border;
+    border-radius: 4px;
+
+    .vm-icon {
+      display: inline;
+      padding-right: @lg-space;
+      font-size: 25px;
+    }
+
+    .vm-status {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 13px;
+      margin-left: 5px;
+      border-radius: 6px;
+    }
+
+    .vm-info {
+      display: inline;
+
+      .info-item {
+        padding-bottom: @min-space;
+
+        .info-item-icon {
+          display: inline;
+          height: 16px;
+          padding-right: @min-space;
+        }
+      }
+
+      :last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .vm-volume {
+    display: flex;
+
+    .volume-inline {
+      width: 36px;
+      margin-bottom: 12px;
+      border-right: @topo-line;
+    }
+
+    .volume-content {
+      flex: 1;
+
+      .attached-volume {
+        display: flex;
+        padding: @min-space 0;
+
+        .attached-volume-line {
+          width: 60px;
+          height: 52px;
+          border-bottom: @topo-line;
+        }
+
+        .attached-volume-content {
+          display: flex;
+          flex: 1;
+          width: 520px;
+          padding: @mid-space;
+          background-color: @resource-box-bg;
+          border: @resource-box-border;
+          border-radius: 4px;
+
+          .volume-icon {
+            padding-right: @lg-space;
+            font-size: 25px;
+          }
+
+          .volume-info {
+            flex: 1;
+
+            .volume-info-item {
+              padding-bottom: @min-space;
+
+              .info-key {
+                margin-right: @min-space;
+              }
+            }
+
+            :last-child {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .attach-action-line {
+        display: inline-block;
+        width: 60px;
+        height: @lg-space;
+        margin-right: 10px;
+        border-bottom: @topo-line;
+      }
+    }
+  }
+}
+
+.attach-btn {
+  max-width: 100px;
+
+  span {
+    max-width: 80px;
+  }
+}
+
+.error-card {
+  flex-grow: 0;
+
+  .pre-wrap {
+    font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}

@@ -1,0 +1,122 @@
+@import '~styles/variables';
+
+.osd {
+  height: 100%;
+  color: rgba(0, 0, 0, 85%);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.header {
+  padding: 20px;
+  overflow: auto;
+
+  .range {
+    :global {
+      .ant-radio-button-wrapper {
+        color: rgba(0, 0, 0, 65%);
+      }
+
+      .ant-radio-button-wrapper-checked {
+        color: @primary-color;
+      }
+    }
+  }
+
+  .download {
+    float: right;
+
+    :global {
+      .ant-btn-icon-only {
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.my-card-row {
+  .top {
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    :global {
+      .ant-card-bordered {
+        display: flex;
+        flex-direction: column;
+
+        .ant-card-body {
+          flex-grow: 1;
+          padding-top: 0;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-card-bordered {
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 9%);
+
+      .ant-card-head {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 12px;
+
+  .inner {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .inner::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.tabs {
+  :global {
+    .ant-tabs-tab {
+      margin-right: 20px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .ant-tabs-nav::before {
+      border-bottom: none;
+    }
+  }
+}
+
+.spin-container {
+  width: 100%;
+  min-height: 400px;
+  padding: 30px 50px;
+  text-align: center;
+}

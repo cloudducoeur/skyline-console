@@ -1,0 +1,147 @@
+@import '~styles/variables';
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  padding-top: @body-padding;
+  // overflow: hidden;
+  background-color: #fff;
+
+  :global {
+    .ant-spin-nested-loading {
+      height: 100%;
+    }
+
+    .ant-spin-container {
+      height: 100%;
+    }
+  }
+}
+
+.wrapper-page-padding {
+  padding-top: 0;
+}
+
+.form {
+  height: calc(100% - 48px);
+  margin-right: @body-padding * 2;
+  margin-left: @body-padding * 2;
+  overflow-y: auto;
+  background-color: #fff;
+
+  :global {
+    .ant-form-item-label > label {
+      margin-left: 12px;
+    }
+
+    .ant-form-item-label > .ant-form-item-required {
+      margin-left: 0;
+    }
+
+    .ant-form-item-label {
+      white-space: break-spaces;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  background-color: #fff;
+  box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 9%);
+}
+
+.btns {
+  float: right;
+  margin-right: 32px;
+
+  :global {
+    button {
+      margin-left: 8px;
+    }
+  }
+}
+
+:global {
+  .form-item-text {
+    margin-bottom: 0;
+  }
+
+  .form-item-divider {
+    width: 98% !important;
+    min-width: 90% !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .ant-radio-button-wrapper {
+    color: @color-text-body;
+  }
+
+  .ant-radio-button-wrapper-disabled {
+    color: rgba(0, 0, 0, 25%);
+  }
+}
+
+.tips {
+  display: flex;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  word-break: break-word;
+  background: rgba(0, 0, 0, 15%);
+}
+
+.tips-icon {
+  margin-top: 2px;
+  margin-right: 4px;
+  color: @primary-color;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  float: left;
+  height: 48px;
+  margin-left: 16px;
+  color: rgb(72, 72, 72);
+}
+
+.submit-tip {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.progress-wrapper {
+  width: 170px;
+}
+
+.right-top-extra-wrapper {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 20%);
+
+  :global {
+    .ant-card-head {
+      min-width: 32px;
+
+      .ant-card-extra {
+        padding: 8px 0;
+      }
+    }
+  }
+}
+
+.modal-right-extra-wrapper {
+  border-left: solid 2px @gray-2;
+}

@@ -1,0 +1,143 @@
+@import '~styles/variables';
+
+.table {
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: @border-radius;
+  box-shadow: @base-shadow;
+
+  :global {
+    .ant-table-container {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 5%);
+    }
+
+    .ant-table-pagination.ant-pagination {
+      margin: 0;
+      padding: 8px 16px;
+    }
+  }
+}
+
+.button {
+  min-width: 96px;
+  margin-left: 10px;
+}
+
+.select-title {
+  padding: 2px;
+}
+
+.cancel-select {
+  color: #fff;
+}
+
+.create {
+  min-width: 96px;
+  margin-left: 12px;
+}
+
+.action {
+  padding: 0 4px;
+  color: @blue-color03;
+  font-weight: @font-bold;
+  cursor: pointer;
+}
+
+.column-menu {
+  width: 160px;
+  overflow: hidden;
+  border-radius: @border-radius;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 20%);
+
+  :global {
+    .ant-menu-vertical > .ant-menu-item {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+.custom-button {
+  margin-left: 0;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-header-btns,
+.table-header-action-btns {
+  position: relative;
+  display: inline-block;
+  margin-bottom: calc(@body-padding - 4px);
+
+  :global {
+    button {
+      margin-right: 10px;
+      margin-bottom: 4px;
+    }
+
+    .ant-btn[disabled] {
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 4.5%);
+    }
+
+    .ant-btn-default {
+      color: @table-header-default-button-color;
+      background-color: @table-header-default-button-background;
+      border-color: @table-header-default-button-border;
+    }
+
+    .ant-btn-default:hover {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+
+    .ant-btn-dangerous {
+      color: @table-header-danger-button-color;
+    }
+
+    .ant-btn-dangerous:hover {
+      color: @error-color;
+      border-color: @error-color;
+    }
+
+    .ant-btn[disabled],
+    .ant-btn[disabled]:hover,
+    .ant-btn[disabled]:focus,
+    .ant-btn[disabled]:active {
+      color: @table-header-disable-button-color !important;
+      background: @table-header-disable-button-background !important;
+      border-color: @table-header-disable-button-border !important;
+    }
+  }
+}
+
+.search-row {
+  min-width: 350px;
+}
+
+.search-input {
+  width: 288px;
+  height: 32px;
+}
+
+// .table-header-action-btns {
+//   flex-grow: 0;
+//   flex-shrink: 0;
+// }
+
+.table-header-right {
+  display: flex;
+}
+
+.table-header-btns {
+  margin-right: 0;
+  margin-left: 10px;
+
+  :global {
+    button:last-child {
+      margin-right: 0;
+    }
+  }
+}

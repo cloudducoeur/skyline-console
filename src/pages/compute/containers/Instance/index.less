@@ -1,0 +1,40 @@
+@import '~styles/variables';
+
+.main {
+  margin-left: @nav-width - 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.nav {
+  z-index: 1;
+  width: auto;
+  padding: 0;
+}
+
+.title {
+  display: inline-block;
+  margin-left: 20px;
+  color: #fff;
+  vertical-align: middle;
+
+  :global {
+    .h3 {
+      color: #fff;
+      line-height: 1.33;
+      text-shadow: 0 2px 4px rgba(36, 46, 66, 10%);
+    }
+  }
+
+  & > p {
+    margin-top: 3px;
+    color: #eff4f9;
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

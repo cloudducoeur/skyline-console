@@ -1,0 +1,23 @@
+@import '~styles/variables';
+
+.wrapper {
+  min-height: calc(100vh - 108px);
+
+  :global {
+    .ant-tabs-content {
+      height: 100vh;
+    }
+
+    .ant-tabs > .ant-tabs-nav {
+      background-color: #fff;
+    }
+
+    .ant-tabs-nav-wrap {
+      padding: 0 @body-padding;
+    }
+
+    .list-container {
+      margin-top: 0;
+    }
+  }
+}

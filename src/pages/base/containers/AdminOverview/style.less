@@ -1,0 +1,127 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~styles/variables';
+
+.container {
+  height: 100%;
+  padding: @overview-padding;
+  overflow: auto;
+
+  :global {
+    .ant-card {
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 9%);
+    }
+
+    .ant-card-head {
+      font-size: 16px;
+    }
+  }
+
+  .chart {
+    .resource {
+      display: block;
+      margin-right: 20px;
+      padding-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .num {
+      padding-top: 12px;
+      color: #a3a3a3;
+      font-size: 14px;
+
+      :global {
+        .ant-avatar-square {
+          border-radius: 3px !important;
+        }
+      }
+    }
+
+    :global {
+      .ant-progress-text {
+        color: #222b26;
+      }
+    }
+  }
+
+  .resource-overview {
+    .card {
+      height: 100%;
+
+      .label {
+        display: block;
+        font-size: 16px;
+      }
+
+      .all {
+        display: block;
+        font-size: 24px;
+      }
+
+      .status {
+        color: #a3a3a3;
+      }
+
+      :global {
+        .ant-badge-status-text {
+          margin-right: 8px;
+          margin-left: 4px;
+          color: #a3a3a3;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .right {
+    height: 100%;
+
+    .top {
+      .sider-card {
+        margin: 4px 0;
+        font-size: 14px;
+      }
+
+      :global {
+        .ant-descriptions-view {
+          width: 100%;
+          height: 130px;
+          overflow: auto;
+          border-radius: 4px;
+        }
+
+        .ant-descriptions-item-label {
+          width: 130px;
+        }
+      }
+    }
+  }
+}
+
+.outer {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+  font-size: 12px;
+
+  .inner {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .inner::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+:global {
+  .ant-descriptions-item-container {
+    .ant-descriptions-item-content {
+      display: table-cell;
+    }
+  }
+}

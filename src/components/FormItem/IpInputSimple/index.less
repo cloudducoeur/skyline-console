@@ -1,0 +1,51 @@
+.ip-input {
+  width: 172px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.item-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+}
+
+.item-wrapper:last-child {
+  width: 40px;
+}
+
+.item-wrapper::after {
+  position: absolute;
+  top: 13px;
+  width: 4px;
+  height: 4px;
+  background-color: #484848;
+  border-radius: 50%;
+  content: ' ';
+}
+
+.item-wrapper:last-child::after {
+  display: none;
+}
+
+.item {
+  width: 40px;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.item:focus {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  box-shadow: none;
+}
+
+.ipv6 {
+  width: 120px;
+}

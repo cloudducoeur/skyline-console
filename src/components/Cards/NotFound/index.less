@@ -1,0 +1,41 @@
+@import '~styles/variables';
+
+.wrapper {
+  margin-top: 100px;
+  text-align: center;
+  border-radius: @border-radius;
+}
+
+.image {
+  height: 200px;
+  user-select: none;
+}
+
+.text {
+  display: inline-block;
+  width: 600px;
+  margin-left: 60px;
+  vertical-align: top;
+
+  :global .h1 {
+    color: @light-color08;
+    font-size: 120px;
+    line-height: 1.4;
+    text-align: left;
+    opacity: 0.4;
+    user-select: none;
+  }
+
+  p {
+    color: @second-title-color;
+    font-weight: @font-bold;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: left;
+    text-shadow: 0 4px 8px rgba(36, 46, 66, 10%);
+  }
+
+  a {
+    color: @text-color;
+  }
+}

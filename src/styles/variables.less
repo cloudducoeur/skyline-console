@@ -1,0 +1,255 @@
+/* init */
+@blue-1: #e5007d;
+@blue-2: rgba(0, 104, 255, 65%);
+@blue-3: rgba(89, 157, 255, 35%);
+@blue-4: #005ade;
+@primary-color: @blue-1;
+@info-color: @blue-2;
+@hover-color: @blue-4;
+
+@green-1: #57e39b;
+@green-2: rgba(87, 227, 155, 65%);
+@green-3: rgba(87, 227, 155, 35%);
+@success-color: @green-1;
+
+@yellow-1: #fedf40;
+@yellow-2: rgba(254, 223, 64, 65%);
+@yellow-3: rgba(254, 223, 64, 35%);
+@warn-color: @yellow-1;
+
+@warn-light-color: #f6b23d;
+@warn-dark-color: #fa8c16;
+
+@red-1: #eb354d;
+@red-2: rgba(235, 53, 77, 65%);
+@red-3: rgba(235, 53, 77, 35%);
+@error-color: @red-1;
+@danger-color: #c4233e;
+@danger-color-hover: #f76070;
+
+@gray-1: #d2d2d2;
+@gray-2: #f2f2f2;
+@gray-3: #fafafa;
+
+@dark-text-title: rgba(0, 0, 0, 100%);
+@dark-text-title-second: rgba(0, 0, 0, 85%);
+@color-text-title: rgba(0, 0, 0, 85%);
+@color-text-body: rgba(0, 0, 0, 65%);
+@color-text-caption: rgba(0, 0, 0, 45%);
+
+@size-header-1: 38px;
+@size-header-2: 30px;
+@size-header-3: 24px;
+@size-header-4: 16px;
+
+@dark-color01: #79879c;
+@dark-color02: #6b7b95;
+@dark-color03: #5f708a;
+@dark-color04: #4a5974;
+@dark-color05: #404e68;
+@dark-color06: #36435c;
+@dark-color07: #124191;
+@dark-color08: #181d28;
+@light-color01: #f9fbfd;
+@light-color02: #eff4f9;
+@light-color03: #e3e9ef;
+@light-color04: #d8dee5;
+@light-color05: #d1d7df;
+@light-color06: #ccd3db;
+@light-color07: #c1c9d1;
+@light-color08: #abb4be;
+@green-color01: #c4e6d4;
+@green-color02: #a2d8bb;
+@green-color03: #1890ff;
+@green-color04: #479e88;
+@green-color05: #3b747a;
+@blue-color01: #c7deef;
+@blue-color02: #7eb8dc;
+@blue-color03: #329dce;
+@blue-color04: #3385b0;
+@blue-color05: #326e93;
+@red-color01: #fae7e5;
+@red-color02: #ea8573;
+@red-color03: #ca2621;
+@red-color04: #ab2f29;
+@red-color05: #8c3231;
+@yellow-color01: #ffe1be;
+@yellow-color02: #ffc781;
+@yellow-color03: #f5a623;
+@yellow-color04: #e0992c;
+@yellow-color05: #8d663e;
+@white: #fff;
+
+/* specific color */
+@dark: @dark-color07;
+
+@primary: @green-color03;
+
+@title-color: @color-text-title;
+@second-title-color: @dark-color03;
+@text-color: @primary-color;
+
+@layout-header-color: @dark-color07;
+@background-color: @gray-3;
+@icon-color: @dark-color07;
+
+/*  border */
+@border-radius: 4px;
+
+/*  background */
+@body-bg-color: @light-color02;
+
+/*  shadow */
+@base-shadow: 0 4px 8px 0 rgba(36, 46, 66, 6%);
+@btn-primary-shadow: none;
+
+/*  font */
+@font-family: 'Helvetica Neue', 'Alibaba PuHuiTi Regular', 'Alibaba PuHuiTi',
+  'PingFang SC', 'Lantinghei SC', helvetica, arial, 'Microsoft YaHei',
+  '微软雅黑', 'STHeitiSC-Light', 'simsun', '宋体', 'WenQuanYi Zen Hei',
+  'WenQuanYi Micro Hei', sans-serif;
+@font-family-id: @font-family;
+@size-small: 12px;
+@size-normal: 14px;
+@size-medium: 16px; /* 中号字体 */
+@body-size: @size-small;
+
+@font-bold: 600;
+
+/*  animation */
+@trans-speed: 0.3s;
+
+/*  size */
+@nav-width: 260px;
+@narrow-nav-width: 240px;
+@header-height: 40px;
+@body-padding-left: 16px;
+@body-padding: 16px;
+@breadcrumb-height: 50px;
+
+/*  sider */
+@sider-background: #26262b;
+@sider-open-background: #222121;
+@sider-collapsed-width: 40px;
+@sider-menu-padding: 14px;
+@sider-menu-padding-top: 10px;
+@sider-border-right: none;
+@sider-width: 230px;
+// @sider-menu-item-selected-background: #26262b;
+@sider-menu-item-selected-background: @primary-color;
+@sider-sub-menu-item-margin-top: 4px;
+@sider-sub-menu-item-margin-bottom: 8px;
+@sider-sub-menu-item-selected-background: @primary-color;
+@sider-sub-menu-item-hover-background: transparent;
+@sider-menu-item-selected-border-radius: @border-radius;
+@sider-menu-item-selected-text-color: #fff;
+@sider-menu-item-selected-after-border-right: 3px solid #0c63fa;
+@sider-menu-item-hover-dot-color: @primary-color;
+@sider-menu-item-selected-dot-color: #fff;
+@sider-sub-menu-background: #222121;
+@sider-sub-menu-item-padding-left: 5px;
+@sider-sub-menu-item-dot-color: rgba(255, 255, 255, 65%);
+@sider-trigger-background-color: rgba(0, 0, 0, 35%);
+@sider-menu-title-font-size: 14px;
+@sider-sub-menu-title-font-size: 14px;
+@sider-sub-menu-title-color: rgba(255, 255, 255, 65%);
+
+/* login */
+@login-error: #a43a39;
+
+@money-color: #f50;
+
+//layout
+@layout-header-color: @white;
+@layout-text-color: @title-color;
+@layout-link-color: @primary-color;
+@layout-header-menu-background-color: @layout-header-color;
+@layout-header-menu-text-color: @white;
+@layout-header-menu-text-hover-color: @white;
+@layout-header-menu-search-background: #282e39;
+@layout-header-menu-search-text-color: @white;
+@layout-header-menu-search-icon: #86909c;
+@layout-header-menu-region-hover: #e8f2ff;
+@layout-header-color-hover: @primary-color;
+@layout-selected-color: #111418;
+@layout-header-logo-wrapper-width: 190px;
+@layout-header-logo-image-height: 30px;
+
+//form
+@form-item-label-color: rgba(0, 0, 0, 85%);
+@form-item-magic-input-wrapper-border-color: #d9d9d9;
+
+//avatar-dropdown
+@avatar-color: #bfbfbf;
+@avatar-dropdown-background-color: #fff;
+@avatar-dropdown-text-color: @color-text-title;
+@avatar-dropdown-button-color: @primary-color;
+@avatar-dropdown-property-text-color: #86909c;
+@avatar-dropdown-copy-icon-color: @white;
+@avatar-dropdown-hover-background-color: #fff;
+@avatar-dropdown-hover-text-color: @color-text-title;
+@avatar-dropdown-button-disabled-color: @color-text-title;
+@avatar-dropdown-divider-color: #fff;
+
+//products
+@products-icon-background: @primary-color;
+@products-icon-hover-background: @primary-color;
+@products-header-title-color: @color-text-title;
+@products-title-color: #000;
+@products-sub-title-color: #000;
+@products-icon-fill-color: #c9cdd4;
+@products-drawer-background-1: #fff;
+@products-drawer-divider-color-1: #f0f0f0;
+@products-drawer-hover-background-1: rgba(0, 0, 0, 5%);
+@products-drawer-sub-title-hover-background: rgba(0, 0, 0, 5%);
+@products-drawer-sub-title-hover-color: #000;
+@products-drawer-background-2: #fff;
+@products-drawer-header-title: #fff;
+@products-drawer-left-icon: #0053ec;
+@products-drawer-close-icon: rgba(0, 0, 0, 45%);
+@products-drawer-search-icon: rgba(0, 0, 0, 45%);
+@products-drawer-search-box-shadow: 0 0 0 2px rgba(12, 99, 250, 20%);
+@products-drawer-search-placeholder-color: #86909c;
+@products-drawer-search-border-color: #d9d9d9;
+@products-drawer-search-border: 1px solid #d9d9d9;
+@products-drawer-search-hover-border-color: @primary-color;
+@products-drawer-search-background: #fff;
+@products-drawer-search-input-color: rgba(0, 0, 0, 85%);
+@products-column-width: @sider-width;
+
+// breadcrumb
+@breadcrumb-item-font-size: 12px;
+
+// overview padding
+@overview-padding: 44px;
+
+// table
+@table-header-default-button-background: #fff;
+@table-header-default-button-background-gray: #f6f7fb;
+@table-header-default-button-border: @primary-color;
+@table-header-default-button-color: @primary-color;
+@table-header-search-input-background: #fff;
+@table-header-search-input-border-color: #d9d9d9;
+@table-header-search-input-font-size: 10px;
+@table-header-danger-button-color: @error-color;
+@table-header-disable-button-color: rgba(0, 0, 0, 25%);
+@table-header-disable-button-border: #d9d9d9;
+@table-header-disable-button-background: #f5f5f5;
+@table-row-selected-background: #f2f7ff;
+@table-checkbox-size: 14px;
+
+:export {
+  primaryColor: @primary-color;
+  successColor: @success-color;
+  warnColor: @warn-color;
+  warnDarkColor: @warn-dark-color;
+  warnLightColor: @warn-light-color;
+  errorColor: @error-color;
+  dangerColor: @danger-color;
+  moneyColor: @money-color;
+  infoColor: @info-color;
+  headerHeight: @header-height;
+  productsColumnWidth: @products-column-width;
+}
+
+@import 'variables-custom.less';

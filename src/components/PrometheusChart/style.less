@@ -1,0 +1,36 @@
+.remove-extra-padding {
+  :global {
+    .ant-card-extra {
+      padding: 0;
+    }
+
+    .ant-card-head {
+      border-bottom: none;
+    }
+
+    .ant-card-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .ant-card-loading-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.base-content-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+
+  .refresh {
+    float: left;
+  }
+
+  .header {
+    margin-bottom: 16px;
+  }
+}
