@@ -74,7 +74,7 @@ export class Login extends Component {
     const language = getLocaleShortName();
     const name =
       product_name[language] || t('Cloud du Coeur') || 'Cloud du Coeur';
-    return t('Au coeur du {name}', { name });
+    return t('Bienvenue au coeur du {name}', { name });
   }
 
   get regions() {
@@ -104,7 +104,7 @@ export class Login extends Component {
 
   get ssoProtocols() {
     return {
-      openid: t('OpenID Connect'),
+      openid: t('SSO'),
     };
   }
 
@@ -125,7 +125,7 @@ export class Login extends Component {
 
   get passwordOption() {
     return {
-      label: t('Keystone Credentials'),
+      label: t('Authentification locale'),
       value: 'password',
     };
   }
