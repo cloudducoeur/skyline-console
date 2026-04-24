@@ -15,118 +15,48 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import renderRoutes from 'utils/RouterConfig';
-import { FileTextOutlined } from '@ant-design/icons';
+import { DashboardOutlined, CodeOutlined, BookOutlined } from '@ant-design/icons';
+import * as THREE from 'three';
+import CLOUDS from 'vanta/dist/vanta.clouds.min';
 
 import logo from 'asset/image/logo.png';
 import styles from './index.less';
 
-class AnimatedLoginBackground extends Component {
+class VantaCloudsBackground extends Component {
   constructor(props) {
     super(props);
-
-    this.canvasRef = React.createRef();
-    this.points = [];
-    this.animationFrame = null;
-    this.handleResize = this.handleResize.bind(this);
-    this.animate = this.animate.bind(this);
+    this.vantaRef = React.createRef();
+    this.vantaEffect = null;
   }
 
   componentDidMount() {
-    this.setupCanvas();
-    window.addEventListener('resize', this.handleResize);
+    this.vantaEffect = CLOUDS({
+      el: this.vantaRef.current,
+      THREE,
+      mouseControls: false,
+      touchControls: false,
+      gyroControls: false,
+      minHeight: 200,
+      minWidth: 200,
+      backgroundColor: 0x21242a,
+      skyColor: 0xe5007d,
+      cloudColor: 0xffffff,
+      cloudShadowColor: 0xa00055,
+      sunColor: 0xe5007d,
+      sunGlareColor: 0xff80c0,
+      sunlightColor: 0xff80c0,
+      speed: 1.2,
+    });
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-    if (this.animationFrame) {
-      cancelAnimationFrame(this.animationFrame);
+    if (this.vantaEffect) {
+      this.vantaEffect.destroy();
     }
-  }
-
-  handleResize() {
-    this.setupCanvas();
-  }
-
-  setupCanvas() {
-    const canvas = this.canvasRef.current;
-    if (!canvas) {
-      return;
-    }
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-    const count = Math.max(30, Math.floor((rect.width * rect.height) / 28000));
-    this.points = Array.from({ length: count }).map(() => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: 1 + Math.random() * 3,
-      vx: -0.4 + Math.random() * 0.8,
-      vy: -0.35 + Math.random() * 0.7,
-      alpha: 0.25 + Math.random() * 0.55,
-    }));
-    this.animate();
-  }
-
-  animate() {
-    const canvas = this.canvasRef.current;
-    if (!canvas) {
-      return;
-    }
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      return;
-    }
-
-    ctx.fillStyle = '#e5007d';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    this.points.forEach((point) => {
-      point.x += point.vx;
-      point.y += point.vy;
-
-      if (point.x < -20) {
-        point.x = canvas.width + 20;
-      }
-      if (point.x > canvas.width + 20) {
-        point.x = -20;
-      }
-      if (point.y < -20) {
-        point.y = canvas.height + 20;
-      }
-      if (point.y > canvas.height + 20) {
-        point.y = -20;
-      }
-
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(255, 255, 255, ${point.alpha})`;
-      ctx.arc(point.x, point.y, point.r, 0, Math.PI * 2);
-      ctx.fill();
-    });
-
-    for (let i = 0; i < this.points.length; i += 1) {
-      for (let j = i + 1; j < this.points.length; j += 1) {
-        const p1 = this.points[i];
-        const p2 = this.points[j];
-        const dx = p1.x - p2.x;
-        const dy = p1.y - p2.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 120) {
-          const opacity = (1 - distance / 120) * 0.2;
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
-          ctx.lineWidth = 1;
-          ctx.moveTo(p1.x, p1.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    this.animationFrame = requestAnimationFrame(this.animate);
   }
 
   render() {
-    return <canvas className={styles['animated-bg-canvas']} ref={this.canvasRef} />;
+    return <div className={styles['vanta-bg']} ref={this.vantaRef} />;
   }
 }
 
@@ -140,8 +70,34 @@ export class AuthLayout extends Component {
   renderRight() {
     return (
       <div className={styles.right}>
-        <AnimatedLoginBackground />
-        <div className={styles['full-image-front']} />
+        <VantaCloudsBackground />
+        <div className={styles['quick-access']}>
+          <p className={styles['quick-access-title']}>Accès rapide</p>
+          <a
+            href="https://observabilite.aucoeurdu.cloud"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles['quick-access-btn']}
+          >
+            <DashboardOutlined /> Observabilité
+          </a>
+          <a
+            href="https://forge.aucoeurdu.cloud"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles['quick-access-btn']}
+          >
+            <CodeOutlined /> Forge
+          </a>
+          <a
+            href="https://doc.aucoeurdu.cloud/doc/openstack/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles['quick-access-btn']}
+          >
+            <BookOutlined /> Documentation
+          </a>
+        </div>
       </div>
     );
   }
@@ -150,17 +106,6 @@ export class AuthLayout extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.left}>
-          <div className={styles.lang}>
-            <a
-              href="https://doc.aucoeurdu.cloud/doc/openstack/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.docLink}
-              title="Documentation"
-            >
-              <FileTextOutlined />
-            </a>
-          </div>
           <div className={styles.main}>
             <div className={styles.top}>
               <div className={styles.header}>

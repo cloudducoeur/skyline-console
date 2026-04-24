@@ -84,7 +84,9 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "sha512-crypt-ts": "^0.1.26",
-    "uuid": "^8.3.2"
+    "three": "0.134.0",
+    "uuid": "^8.3.2",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
