@@ -57,6 +57,7 @@
 
 .vanta-bg {
   position: absolute;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -65,7 +66,7 @@
 }
 
 .hero {
-  position: absolute;
+  display: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
@@ -104,7 +105,7 @@
 
 .quick-access {
   position: absolute;
-  bottom: 40px;
+  bottom: 110px;
   right: 32px;
   display: flex;
   flex-direction: column;
@@ -142,6 +143,51 @@
       color: #fff;
       background-color: rgba(229, 0, 125, 0.5);
       border-color: #e5007d;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 12px 32px;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    rgba(33, 36, 42, 0.6),
+    rgba(33, 36, 42, 0.15) 60%,
+    transparent
+  );
+  backdrop-filter: blur(2px);
+
+  .footer-text {
+    margin: 0 0 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .footer-separator {
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 }

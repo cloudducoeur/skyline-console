@@ -69,6 +69,11 @@ export class AuthLayout extends Component {
       <div className={styles.right}>
         <VantaCloudsBackground />
         <div className={styles['hero']}>
+          <p className={styles['hero-eyebrow']}>Bienvenue sur</p>
+          <h1 className={styles['hero-title']}>Au Cœur du Cloud</h1>
+          <p className={styles['hero-subtitle']}>
+            Votre infrastructure OpenStack, simple et souveraine.
+          </p>
         </div>
         <div className={styles['quick-access']}>
           <p className={styles['quick-access-title']}>Accès rapide</p>
@@ -115,6 +120,9 @@ export class AuthLayout extends Component {
           </div>
         </div>
         {this.renderRight()}
+        <div className={styles['footer']}>
+          <p className={styles['footer-text']}>© 2026 Cloud du Coeur. Tous droits réservés.</p>
+        </div>
       </div>
     );
   }
