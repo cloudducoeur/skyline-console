@@ -37,3 +37,4 @@ venv/
 ENV/
 build/
 .tox
+infra/

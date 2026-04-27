@@ -11,6 +11,15 @@
 
 .login-form {
   width: 310px;
+
+  :global {
+    .login-form-button.ant-btn-primary:hover,
+    .login-form-button.ant-btn-primary:focus,
+    .login-form-button.ant-btn-primary:active {
+      background-color: #000;
+      border-color: #000;
+    }
+  }
 }
 
 .login-error {

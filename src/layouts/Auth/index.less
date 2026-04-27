@@ -139,10 +139,12 @@
     backdrop-filter: blur(8px);
     transition: all 0.25s ease;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       color: #fff;
-      background-color: rgba(229, 0, 125, 0.5);
-      border-color: #e5007d;
+      background-color: #000;
+      border-color: #000;
     }
   }
 }
