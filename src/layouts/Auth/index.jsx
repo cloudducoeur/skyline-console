@@ -121,7 +121,7 @@ export class AuthLayout extends Component {
         </div>
         {this.renderRight()}
         <div className={styles['footer']}>
-          <p className={styles['footer-text']}>© 2026 Cloud du Coeur. Tous droits réservés.</p>
+          <p className={styles['footer-text']}>© Les Restaurants du Cœur - Les relais du Cœur</p>
         </div>
       </div>
     );
