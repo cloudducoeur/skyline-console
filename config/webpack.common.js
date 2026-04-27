@@ -86,7 +86,7 @@ module.exports = {
           },
         ],
         include: [
-          root('src/asset/image/cloud-logo.svg'),
+          root('src/asset/image/cloud-logo.png'),
           root('src/asset/image/cloud-logo-white.svg'),
         ],
       },
@@ -102,7 +102,7 @@ module.exports = {
           },
         ],
         exclude: [
-          root('src/asset/image/cloud-logo.svg'),
+          root('src/asset/image/cloud-logo.png'),
           root('src/asset/image/cloud-logo-white.svg'),
         ],
       },
