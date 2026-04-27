@@ -1,10 +1,17 @@
 @import '~styles/variables';
 
-// .left {}
+.left {
+  max-height: calc(100vh - @header-height - 60px);
+  padding: 8px 0;
+  overflow-y: auto;
+}
 
 .item {
-  padding: 12px 24px;
+  margin: 2px 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 
   &:hover {
     background-color: @products-drawer-hover-background-1;
@@ -15,7 +22,10 @@
   display: block;
   width: 100%;
   color: @products-title-color;
+  font-weight: 500;
   font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
 
   &:hover {
     color: @products-title-color;

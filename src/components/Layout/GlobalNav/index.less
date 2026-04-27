@@ -27,11 +27,19 @@
 
 .drawer-left {
   :global {
+    .ant-drawer-content {
+      background-color: @products-drawer-background-2;
+      box-shadow: 8px 0 24px rgba(0, 0, 0, 20%);
+    }
+
     .ant-drawer-header {
+      padding: 14px 16px;
       background-color: @products-drawer-background-1;
 
       .ant-drawer-title {
         color: @products-header-title-color;
+        font-weight: 600;
+        letter-spacing: 0.01em;
       }
 
       border-bottom-color: @products-drawer-divider-color-1;
@@ -45,6 +53,15 @@
 
 .drawer-right {
   :global {
+    .ant-drawer-content {
+      background-color: @products-drawer-background-1;
+      box-shadow: 12px 0 28px rgba(0, 0, 0, 24%);
+    }
+
+    .ant-drawer-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 8%);
+    }
+
     .ant-drawer-body {
       background-color: @products-drawer-background-1;
     }

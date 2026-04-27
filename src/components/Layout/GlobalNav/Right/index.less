@@ -2,36 +2,42 @@
 
 .right {
   columns: 200px 3;
-  column-gap: 12px;
+  column-gap: 18px;
 }
 
 .nav-item {
   display: inline-block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   break-inside: avoid;
 
   .title {
     box-sizing: border-box;
-    height: 32px;
-    margin-bottom: 4px;
+    min-height: 32px;
+    margin-bottom: 8px;
     color: @products-title-color;
     font-weight: 600;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
     transition: color 0.2s ease;
   }
 }
 
 .children-item {
   position: relative;
-  height: 32px;
+  min-height: 32px;
+  margin-bottom: 2px;
+  padding: 0 8px;
   margin-right: 8px;
   line-height: 32px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 
   a {
     display: block;
+    min-height: 32px;
   }
 
   &:hover {
@@ -45,13 +51,16 @@
 
   .link-name {
     color: @products-sub-title-color;
+    font-size: 13px;
   }
 }
 
 .search {
-  width: 60%;
+  width: 68%;
+  max-width: 520px;
+  min-width: 280px;
   margin-top: -8px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   margin-left: 0;
 
   :global {
