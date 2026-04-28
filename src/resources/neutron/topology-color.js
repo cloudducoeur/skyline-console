@@ -19,10 +19,10 @@ export const combosBackground = [
   'rgba(255,255,240,0.3)',
 ];
 
-export const combosColors = ['#9AC3FF', '#A5FFF0', '#ECDCFF', '#FFFF00'];
+export const combosColors = ['#56aed8', '#A5FFF0', '#ECDCFF', '#FFFF00'];
 
 export const subnetsColors = [
-  ['#9AC3FF', '#4C95FF', '#e5007d', '#0080FF', '#0066CC', '#0000FF'],
+  ['#56aed8', '#4C95FF', '#e5007d', '#0080FF', '#0066CC', '#0000FF'],
   ['#CCF2EC', '#92DACF', '#46B1A5', '#CCF2EC', '#92DACF', '#46B1A5'],
   ['#ECDCFF', '#D6B3FF', '#BA80FF', '#ECDCFF', '#D6B3FF', '#BA80FF'],
   ['#FFFACD', '#FFFF00', '#FFD700', '#FFFACD', '#FFFF00', '#FFD700'],
