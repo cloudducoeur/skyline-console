@@ -1,10 +1,11 @@
 host: 0.0.0.0
 port: 8088
-server: http://localhost
+server: http://localhost:9999
 
 theme: default
 
 globalVariables:
   defaultLanguage: fr
   supportLanguages: # use value in i18n.js
+    - en
     - fr
