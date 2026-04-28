@@ -7,5 +7,4 @@ theme: default
 globalVariables:
   defaultLanguage: fr
   supportLanguages: # use value in i18n.js
-    - en
     - fr

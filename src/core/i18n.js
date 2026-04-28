@@ -116,7 +116,7 @@ const loadLocales = () => {
   return intl.init({
     currentLocale,
     locales,
-    fallbackLocale: 'en',
+    fallbackLocale: 'fr',
   });
 };
 
