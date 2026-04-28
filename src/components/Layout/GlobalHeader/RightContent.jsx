@@ -14,6 +14,7 @@
 
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import { BookOutlined } from '@ant-design/icons';
 import { Button, Col, Row } from 'antd';
 import Avatar from './AvatarDropdown';
 import styles from './index.less';
@@ -60,6 +61,21 @@ export class GlobalHeaderRight extends Component {
     );
   }
 
+  renderDocumentation() {
+    return (
+      <Button
+        type="link"
+        href="https://doc.aucoeurdu.cloud/doc/openstack/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles['single-link']}
+      >
+        <BookOutlined />
+        {t('Documentation')}
+      </Button>
+    );
+  }
+
   renderExtra() {
     return null;
   }
@@ -74,6 +90,7 @@ export class GlobalHeaderRight extends Component {
         <Row justify="space-between" align="middle" gutter={10}>
           <Col>
             {this.renderExtraLink()}
+            {this.renderDocumentation()}
             {this.renderProject()}
             {this.renderAdministrator()}
           </Col>
