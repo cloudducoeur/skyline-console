@@ -14,7 +14,7 @@
 
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
-import { BookOutlined } from '@ant-design/icons';
+import { BookOutlined, DashboardOutlined } from '@ant-design/icons';
 import { Button, Col, Row } from 'antd';
 import Avatar from './AvatarDropdown';
 import styles from './index.less';
@@ -76,6 +76,21 @@ export class GlobalHeaderRight extends Component {
     );
   }
 
+  renderObservability() {
+    return (
+      <Button
+        type="link"
+        href="https://observabilite.aucoeurdu.cloud/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles['single-link']}
+      >
+        <DashboardOutlined />
+        {t('Observability')}
+      </Button>
+    );
+  }
+
   renderExtra() {
     return null;
   }
@@ -90,6 +105,7 @@ export class GlobalHeaderRight extends Component {
         <Row justify="space-between" align="middle" gutter={10}>
           <Col>
             {this.renderExtraLink()}
+            {this.renderObservability()}
             {this.renderDocumentation()}
             {this.renderProject()}
             {this.renderAdministrator()}
