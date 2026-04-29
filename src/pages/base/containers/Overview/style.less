@@ -1,6 +1,8 @@
 @import '~antd/lib/style/themes/default.less';
 @import '~styles/variables';
 
+@overview-card-radius: 10px;
+
 .container {
   height: 100%;
   padding: @overview-padding;
@@ -17,7 +19,7 @@
     font-size: 18px;
     line-height: 88px;
     background: #fff;
-    border-radius: @border-radius;
+    border-radius: @overview-card-radius;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 9%);
     opacity: 0.9;
   }
@@ -31,7 +33,9 @@
 
   :global {
     .ant-card {
+      border-radius: @overview-card-radius;
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 9%);
+      overflow: hidden;
     }
 
     .ant-card-head {
@@ -104,7 +108,7 @@
 }
 
 .bottom {
-  border-radius: @border-radius;
+  border-radius: @overview-card-radius;
 
   :global {
     .ant-card {
