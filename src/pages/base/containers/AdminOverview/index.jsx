@@ -24,6 +24,7 @@ import ComputeService from './components/ComputeService';
 import NetworkService from './components/NetworkService';
 import VirtualResource from './components/VirtualResource';
 import ResourceOverview from './components/ResourceOverview';
+import ResourceTrends from './components/ResourceTrends';
 
 export class Overview extends Component {
   constructor(props) {
@@ -41,6 +42,10 @@ export class Overview extends Component {
 
   renderResourceOverview() {
     return <ResourceOverview store={globalServerStore} />;
+  }
+
+  renderResourceTrends() {
+    return <ResourceTrends />;
   }
 
   renderComputeService() {
@@ -62,6 +67,9 @@ export class Overview extends Component {
         </Row>
         <Row gutter={16} style={{ marginBottom: 22 }}>
           <Col span={24}>{this.renderResourceOverview()}</Col>
+        </Row>
+        <Row gutter={16} style={{ marginBottom: 22 }}>
+          <Col span={24}>{this.renderResourceTrends()}</Col>
         </Row>
         <Row gutter={16}>
           <Col span={12} className={styles.right}>

@@ -35,6 +35,7 @@ const BaseContent = (props) => {
     renderNodeSelect,
     fetchNodesFunc,
     defaultNode,
+    defaultRange,
     children,
     type,
   } = props;
@@ -42,7 +43,7 @@ const BaseContent = (props) => {
   const [node, Nodes, setNode, setNodes] = useNodeSelect(defaultNode);
 
   const [range, Selector, groupIndex, setRange] = useRangeSelect(
-    defaultOneHourAgo()
+    defaultRange || defaultOneHourAgo()
   );
 
   const [interval, Intervals] = useIntervals(range);
@@ -133,6 +134,7 @@ BaseContent.defaultProps = {
   renderTimeRangeSelect: true,
   fetchNodesFunc: defaultGetNodes,
   defaultNode: undefined,
+  defaultRange: undefined,
 };
 
 export default BaseContent;

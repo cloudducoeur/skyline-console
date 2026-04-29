@@ -108,6 +108,36 @@ const metricDict = {
         (url) => `sum(irate(${url}[5m]))`,
       ],
     },
+    adminInstancesCount: {
+      url: ['openstack_nova_server_status'],
+      finalFormatFunc: [(url) => `sum(${url})`],
+    },
+    adminVcpusUsed: {
+      url: ['openstack_nova_vcpus_used'],
+      finalFormatFunc: [(url) => `sum(${url})`],
+    },
+    adminMemoryUsed: {
+      url: ['openstack_nova_memory_used_bytes'],
+      finalFormatFunc: [(url) => `sum(${url})`],
+    },
+    adminVolumesCount: {
+      url: ['openstack_cinder_volumes'],
+      finalFormatFunc: [(url) => `sum(${url})`],
+    },
+    adminVolumeCapacityUsed: {
+      url: [
+        'os_cinder_volume_pools_total_capacity_gb-os_cinder_volume_pools_free_capacity_gb',
+      ],
+      finalFormatFunc: [(url) => `sum(${url})`],
+    },
+    adminNetworksCount: {
+      url: ['openstack_neutron_networks'],
+      finalFormatFunc: [(url) => `sum(${url})`],
+    },
+    adminPortsCount: {
+      url: ['openstack_neutron_ports'],
+      finalFormatFunc: [(url) => `sum(${url})`],
+    },
   },
   physicalNode: {
     cpuCores: {
