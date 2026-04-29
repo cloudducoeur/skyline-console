@@ -9,6 +9,8 @@ Skyline Console is a modern dashboard for OpenStack - UI.
 * Release notes: https://docs.openstack.org/releasenotes/skyline-console/
 * Wiki: https://wiki.openstack.org/wiki/Skyline
 
+## Demo
+
 ![](./static/demo-skyline.gif)
 
 ## How to build
