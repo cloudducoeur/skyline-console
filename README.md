@@ -1,5 +1,4 @@
-# Skyline (OpenStack Modern Dashboard) - Cloud du Coeur
-
+# Skyline (OpenStack Modern Dashboard)
 Skyline Console is a modern dashboard for OpenStack - UI.
 
 * Project documentation: https://docs.openstack.org/skyline-console/latest/
