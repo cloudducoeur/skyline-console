@@ -13,12 +13,16 @@ const AppFooter = ({ variant = 'app' }) => {
     <div className={footerClass}>
       <p className={styles['footer-text']}>
         © Les Restaurants du Cœur - Les relais du Cœur
-      </p>
-      <div className={styles['footer-links']}>
-        <a href={STATUS_URL} target="_blank" rel="noopener noreferrer">
+        <span className={styles['footer-separator']}> - </span>
+        <a
+          href={STATUS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles['footer-link']}
+        >
           Etat des services
         </a>
-      </div>
+      </p>
     </div>
   );
 };
