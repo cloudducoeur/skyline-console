@@ -20,6 +20,7 @@ import classnames from 'classnames';
 import renderRoutes from 'utils/RouterConfig';
 import NotFound from 'components/Cards/NotFound';
 import PageLoading from 'components/PageLoading';
+import AppFooter from 'components/Layout/AppFooter';
 import { getPath } from 'utils/route-map';
 import styles from './index.less';
 
@@ -185,6 +186,7 @@ export class Right extends Component {
           <Suspense fallback={<PageLoading className="sl-page-loading" />}>
             {children}
           </Suspense>
+          <AppFooter />
         </Content>
       </Layout>
     );

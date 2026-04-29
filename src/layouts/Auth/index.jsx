@@ -20,6 +20,7 @@ import * as THREE from 'three';
 import NET from 'vanta/dist/vanta.net.min';
 
 import logo from 'asset/image/logo.png';
+import AppFooter from 'components/Layout/AppFooter';
 import styles from './index.less';
 
 class VantaCloudsBackground extends Component {
@@ -113,9 +114,7 @@ export class AuthLayout extends Component {
           </div>
         </div>
         {this.renderRight()}
-        <div className={styles['footer']}>
-          <p className={styles['footer-text']}>© Les Restaurants du Cœur - Les relais du Cœur</p>
-        </div>
+        <AppFooter variant="auth" />
       </div>
     );
   }
