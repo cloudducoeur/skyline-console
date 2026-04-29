@@ -21,6 +21,6 @@ module.exports = {
   'btn-default-color': '#0C63FA',
   'btn-default-border': '#0C63FA',
   'border-color-base': '#E8E8EA',
-  'border-radius-base': '2px',
+  'border-radius-base': '8px',
   'font-size-base': '12px',
 };

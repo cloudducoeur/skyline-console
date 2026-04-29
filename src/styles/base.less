@@ -183,6 +183,12 @@
 
   .sl-table,
   .sl-simple-table {
+    .ant-table,
+    .ant-table-container {
+      border-radius: @border-radius;
+      overflow: hidden;
+    }
+
     .ant-table-thead > tr > th {
       background: rgba(0, 104, 255, 2%);
     }
@@ -216,6 +222,13 @@
       width: @table-checkbox-size;
       height: @table-checkbox-size;
     }
+  }
+
+  .ant-card,
+  .ant-list-bordered,
+  .ant-descriptions-bordered .ant-descriptions-view {
+    border-radius: @border-radius;
+    overflow: hidden;
   }
 
   .tip {

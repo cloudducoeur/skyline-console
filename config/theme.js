@@ -22,6 +22,6 @@ module.exports = {
   'error-color': '#EB354D',
   'btn-default-color': '#e5007d',
   'btn-default-border': '#e5007d',
-  'border-radius-base': '4px',
+  'border-radius-base': '8px',
   'font-size-base': '12px',
 };
